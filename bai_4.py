@@ -32,12 +32,12 @@ knn.train(train,0,train_labels)
 
 
 img_test = cv2.imread('anh_test_2.png', 0) # đọc ảnh test
-print(img_test)
-img_test_array = np.array(img_test)
-img_test_array_reshape =img_test_array.reshape(-1,400).astype(np.float32)
+# print(img_test)
+img_test_array = np.array(img_test) # chuyển ảnh về dạng mảng
+img_test_array_reshape =img_test_array.reshape(-1,400).astype(np.float32) # chuyển về mảng 400 * 1 kiểu float32
 
 
-temp, result, neighbour, distance = knn.findNearest(img_test_array_reshape, 7)
+temp, result, neighbour, distance = knn.findNearest(img_test_array_reshape, 7) # tìm hàng xóm gần nhất để đưa ra kết quả
 
 print(temp)
 print(result)

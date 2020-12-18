@@ -24,7 +24,7 @@ def run_example():
 	model = load_model('final_model.h5')
 	# predict the class
 	digit = model.predict_classes(img)
-	print(digit[0])
+	print("result predict is:"+ str(digit[0]))
 
 # entry point, run the example
 run_example()
